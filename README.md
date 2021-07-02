@@ -138,3 +138,11 @@ cd gnome-terminal
 
 ./install.sh
 
+## Wine & Lutris
+
+sudo dnf config-manager --add-repo https://dl.winehq.org/wine-builds/fedora/34/winehq.repo
+
+sudo dnf install winehq-stable
+
+sudo dnf install lutris
+

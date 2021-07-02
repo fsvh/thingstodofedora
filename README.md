@@ -95,7 +95,7 @@ sudo chmod a+wr -R /var/lib/flatpak/app/com.spotify.Client/x86_64/stable/active/
 
 ## Plex media server 
 
-sudo tee /etc/yum.repos.d/plex.repo<<EOF
+>sudo tee /etc/yum.repos.d/plex.repo<<EOF
 [Plexrepo]
 name=plexrepo
 baseurl=https://downloads.plex.tv/repo/rpm/\$basearch/

@@ -7,7 +7,7 @@ sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-rele
 
 sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
-##USB WIFI driver
+## USB WIFI driver
 sudo dnf -y install git dkms kernel-devel kernel-debug-devel
 
 mkdir ~/src
@@ -27,7 +27,7 @@ sudo dnf -y install akmod-nvidia
 
 sudo dnf install xorg-x11-drv-nvidia-cuda
 
-##Tweaks & others
+## others
 sudo dnf -y install gnome-tweak-tool
 
 sudo dnf -y install gnome-extensions-app
@@ -36,7 +36,7 @@ sudo dnf groupupdate multimedia --setop="install_weak_deps=False" --exclude=Pack
 
 sudo dnf groupupdate sound-and-video
 
-##Hack bash to zsh
+## Hack bash to zsh
 exec bash
 
 echo $PATH
@@ -48,3 +48,28 @@ exec zsh
 nano .zshrc
 
 export Path=Copier le resultat
+
+## Flatpak apps
+
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+flatpak install flathub com.spotify.Client
+
+flatpak install flathub org.videolan.VLC
+
+flatpak install flathub org.inkscape.Inkscape
+
+## Spicetify 
+
+curl -fsSL https://raw.githubusercontent.com/khanhas/spicetify-cli/master/install.sh | sh
+
+spicetify
+
+Ajouter le chemin prefs au fichier .xml
+
+sudo chmod a+wr /var/lib/flatpak/app/com.spotify.Client/x86_64/stable/active/files/extra/share/spotify
+sudo chmod a+wr -R /var/lib/flatpak/app/com.spotify.Client/x86_64/stable/active/files/extra/share/spotify/Apps
+ 
+
+
+

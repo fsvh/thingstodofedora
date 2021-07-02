@@ -36,7 +36,20 @@ sudo dnf groupupdate multimedia --setop="install_weak_deps=False" --exclude=Pack
 
 sudo dnf groupupdate sound-and-video
 
-## Hack bash to zsh
+sudo reboot
+
+## Install & hack bash to zsh
+
+sudo dnf install zsh
+
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+plugins=( [plugins...] zsh-syntax-highlighting zsh-autosuggestions)
+
 exec bash
 
 echo $PATH
@@ -58,6 +71,8 @@ flatpak install flathub com.spotify.Client
 flatpak install flathub org.videolan.VLC
 
 flatpak install flathub org.inkscape.Inkscape
+
+sudo reebot
 
 ## Spicetify 
 

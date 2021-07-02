@@ -38,6 +38,14 @@ sudo dnf groupupdate sound-and-video
 
 sudo reboot
 
+## Google chrome
+
+sudo dnf install fedora-workstation-repositories
+
+sudo dnf config-manager --set-enabled google-chrome
+
+sudo dnf install google-chrome-stable
+
 ## Install & hack bash to zsh
 
 sudo dnf install zsh

@@ -107,9 +107,9 @@ EOF
 sudo dnf install plexmediaserver -y
 
 
-$ sudo systemctl start plexmediaserver
-$ sudo systemctl enable plexmediaserver
-$ systemctl status plexmediaserver
+sudo systemctl start plexmediaserver
+sudo systemctl enable plexmediaserver
+systemctl status plexmediaserver
 
 ## Tweaks 
 

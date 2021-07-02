@@ -92,7 +92,41 @@ Ajouter le chemin prefs au fichier .xml
 
 sudo chmod a+wr /var/lib/flatpak/app/com.spotify.Client/x86_64/stable/active/files/extra/share/spotify
 sudo chmod a+wr -R /var/lib/flatpak/app/com.spotify.Client/x86_64/stable/active/files/extra/share/spotify/Apps
- 
+
+## Plex media server 
+
+sudo tee /etc/yum.repos.d/plex.repo<<EOF
+[Plexrepo]
+name=plexrepo
+baseurl=https://downloads.plex.tv/repo/rpm/\$basearch/
+enabled=1
+gpgkey=https://downloads.plex.tv/plex-keys/PlexSign.key
+gpgcheck=1
+EOF
+
+sudo dnf install plexmediaserver -y
 
 
+$ sudo systemctl start plexmediaserver
+$ sudo systemctl enable plexmediaserver
+$ systemctl status plexmediaserver
+
+## Tweaks 
+
+### Gedit dark theme
+
+mkdir -p ~/.local/share/gedit/plugins
+cd ~/.local/share/gedit/plugins
+git clone https://github.com/fernzi/gedit-darktheme.git
+
+### Dracula Gdit theme
+
+wget https://raw.githubusercontent.com/dracula/gedit/master/dracula.xml
+mv dracula.xml $HOME/.local/share/gedit/styles/
+
+### Dracula Gnome terminal
+
+git clone https://github.com/dracula/gnome-terminal
+cd gnome-terminal
+./install.sh
 

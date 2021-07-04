@@ -128,7 +128,6 @@ sudo dnf install lutris
 
 ## Plex media server 
 
-'''
 sudo tee /etc/yum.repos.d/plex.repo<<EOF
 [Plexrepo]
 name=plexrepo
@@ -137,7 +136,6 @@ enabled=1
 gpgkey=https://downloads.plex.tv/plex-keys/PlexSign.key
 gpgcheck=1
 EOF
-'''
 
 sudo dnf install plexmediaserver -y
 

@@ -128,7 +128,7 @@ sudo dnf install lutris
 
 ## Plex media server 
 
->>> sudo tee /etc/yum.repos.d/plex.repo<<EOF
+>sudo tee /etc/yum.repos.d/plex.repo<<EOF
 [Plexrepo]
 name=plexrepo
 baseurl=https://downloads.plex.tv/repo/rpm/\$basearch/

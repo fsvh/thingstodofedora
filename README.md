@@ -1,25 +1,28 @@
 # thingstodofedora
 Quelques installations et icones
-```
+
 sudo dnf update -y
-```
-```
+
 sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
-```
-```
+
 sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-```
+
 ## USB WIFI driver
-```
 sudo dnf -y install git dkms kernel-devel kernel-debug-devel
+
 mkdir ~/src
+
 cd ~/src
+
 git clone https://github.com/morrownr/8812au.git
+
 cd ~/src/8812au
+
 sudo ./install-driver.sh
+
 sudo reboot
-```
-##Nvidia drivers
+
+## Nvidia drivers
 sudo dnf -y install akmod-nvidia
 
 sudo dnf install xorg-x11-drv-nvidia-cuda
@@ -121,10 +124,10 @@ sudo dnf config-manager --add-repo https://dl.winehq.org/wine-builds/fedora/34/w
 
 sudo dnf install winehq-stable
 
-sudo dnf install lutris
+`sudo dnf install lutris`
 
 ## Plex media server 
-
+```
 sudo tee /etc/yum.repos.d/plex.repo<<EOF
 [Plexrepo]
 name=plexrepo
@@ -133,6 +136,7 @@ enabled=1
 gpgkey=https://downloads.plex.tv/plex-keys/PlexSign.key
 gpgcheck=1
 EOF
+```
 
 sudo dnf install plexmediaserver -y
 

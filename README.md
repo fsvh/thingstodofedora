@@ -28,7 +28,7 @@ sudo reboot
 sudo dnf -y install akmod-nvidia
 ```
 ```
-sudo dnf install xorg-x11-drv-nvidia-cuda
+sudo dnf -y install xorg-x11-drv-nvidia-cuda
 ```
 ## others
 ```
@@ -48,17 +48,17 @@ sudo reboot
 ```
 ## Google chrome
 ```
-sudo dnf install fedora-workstation-repositories
+sudo dnf install -y fedora-workstation-repositories
 ```
 ```
 sudo dnf config-manager --set-enabled google-chrome
 ```
 ```
-sudo dnf install google-chrome-stable
+sudo dnf install -y google-chrome-stable
 ```
 ## Install & hack bash to zsh
 ```
-sudo dnf install zsh
+sudo dnf install -y zsh
 ```
 ```
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -137,10 +137,10 @@ cd gnome-terminal
 sudo dnf config-manager --add-repo https://dl.winehq.org/wine-builds/fedora/34/winehq.repo
 ```
 ```
-sudo dnf install winehq-stable
+sudo dnf install -y winehq-stable
 ```
 ```
-sudo dnf install lutris
+sudo dnf install -y lutris
 ```
 ## Plex media server 
 ```
@@ -154,7 +154,7 @@ gpgcheck=1
 EOF
 ```
 ```
-sudo dnf install plexmediaserver -y
+sudo dnf install -y plexmediaserver 
 ```
 ```
 sudo systemctl start plexmediaserver

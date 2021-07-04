@@ -1,27 +1,24 @@
 # thingstodofedora
 Quelques installations et icones
-
+```
 sudo dnf update -y
-
+```
+```
 sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
-
+```
+```
 sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-
+```
 ## USB WIFI driver
+```
 sudo dnf -y install git dkms kernel-devel kernel-debug-devel
-
 mkdir ~/src
-
 cd ~/src
-
 git clone https://github.com/morrownr/8812au.git
-
 cd ~/src/8812au
-
 sudo ./install-driver.sh
-
 sudo reboot
-
+```
 ##Nvidia drivers
 sudo dnf -y install akmod-nvidia
 

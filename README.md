@@ -1,5 +1,5 @@
 # thingstodofedora
-Quelques installations et icons
+Quelques installations et icones
 
 sudo dnf update -y
 
@@ -94,26 +94,6 @@ sudo chmod a+wr /var/lib/flatpak/app/com.spotify.Client/x86_64/stable/active/fil
 
 sudo chmod a+wr -R /var/lib/flatpak/app/com.spotify.Client/x86_64/stable/active/files/extra/share/spotify/Apps
 
-## Plex media server 
-
->sudo tee /etc/yum.repos.d/plex.repo<<EOF
-[Plexrepo]
-name=plexrepo
-baseurl=https://downloads.plex.tv/repo/rpm/\$basearch/
-enabled=1
-gpgkey=https://downloads.plex.tv/plex-keys/PlexSign.key
-gpgcheck=1
-EOF
-
-sudo dnf install plexmediaserver -y
-
-
-sudo systemctl start plexmediaserver
-
-sudo systemctl enable plexmediaserver
-
-systemctl status plexmediaserver
-
 ## Tweaks 
 
 ### Gedit dark theme
@@ -146,3 +126,21 @@ sudo dnf install winehq-stable
 
 sudo dnf install lutris
 
+## Plex media server 
+
+>>> sudo tee /etc/yum.repos.d/plex.repo<<EOF
+[Plexrepo]
+name=plexrepo
+baseurl=https://downloads.plex.tv/repo/rpm/\$basearch/
+enabled=1
+gpgkey=https://downloads.plex.tv/plex-keys/PlexSign.key
+gpgcheck=1
+EOF
+
+sudo dnf install plexmediaserver -y
+
+sudo systemctl start plexmediaserver
+ 
+sudo systemctl enable plexmediaserver
+  
+systemctl status plexmediaserver

@@ -113,6 +113,14 @@ sudo chmod a+wr -R /var/lib/flatpak/app/com.spotify.Client/x86_64/stable/active/
 ```
 ## Tweaks 
 
+### zsh dracula syntax
+```
+git clone https://github.com/dracula/zsh.git ~/Téléchargements/zsh
+cd ~/Téléchargements/zsh
+mv dracula.zsh-theme lib ~/.oh-my-zsh/themes/
+```
+Puis remplacer .zshrc par celui de git
+
 ### Gedit dark theme
 ```
 mkdir -p ~/.local/share/gedit/plugins
